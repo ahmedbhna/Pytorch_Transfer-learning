@@ -4,7 +4,10 @@ Let us first explore this model's layers and then make a decision as to which on
 Suppose, I want to train a dataset to learn to differentiate between a car and a bicycle. Now, I could potentially gather images of both categories and train a network from scratch. But, given the majority of work already out there, it's easy to find a model trained to identify things like Dogs, cats, and humans. Admittedly, neither of these 3 look like cars or bicycles. However, it's still better than nothing. We could start by taking this model, and train it to learn car v/s bicycle. Gains : 1) It will be faster, 2) We need lesser images of cats and bicycles.
 
 
-Now, let's take a look at the contents of a resnet18. We use the function .children() for this purpose. This lets us look at the contents/layers of a model. Then, we use the .parameters() function to access the parameters/weights of any layer. Finally, every parameter has a property .requires_grad which defines whether a parameter is trained or frozen. By default it is True, and the network updates it in every iteration. If it is set to False, then it is not updated and is said to be "frozen".
+Now, let's take a look at the contents of a resnet18.
+We use the function .children() for this purpose. This lets us look at the contents/layers of a model. 
+Then, we use the .parameters() function to access the parameters/weights of any layer. 
+Finally, every parameter has a property .requires_grad which defines whether a parameter is trained or frozen. By default it is True, and the network updates it in every iteration. If it is set to False, then it is not updated and is said to be "frozen".
 
 
 Important Note
